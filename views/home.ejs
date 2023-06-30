@@ -1,0 +1,49 @@
+<html>
+    <head>
+    <link rel="stylesheet" href="/css/home.css">
+    </head>
+    <body>
+        <h1 id="todolist">ToDo List</h1>
+        <form action="/addtodo" method="post">
+            <div id="description-div">
+                <h5 class="heading">Description</h5>
+                <input type="text" name="description" placeholder="What do you need to do?" required>
+            </div>
+            <div id="category-date-div">
+                <div id="category-date-div-category">
+                    <h5 class="heading">Category</h5>
+                    <label for="category" aria-required="true"></label>
+                    <select name="category" id="category">
+                        <option value="personal">Personal</option>
+                        <option value="work">Work</option>
+                    </select>
+                </div>
+                <div id="category-date-div-date">
+                    <h5 class="heading">Due Date</h5>
+                    <input type="date" name="date" required> 
+                </div>
+            </div>
+            <div id="buttons">
+                <button id="button1" type="submit">Add</button>
+                <a id="button2" onclick="delete_todo()">Delete<a/>
+            </div>
+        </form>
+        <div id="listitems">
+            <% for(let i of locals.todo_list) { %>
+                <div id="listitem">
+                    <input id="checkbox" type="checkbox" name="task" value="<%= i._id %>">
+                    <div id="listitem-details">
+                        <h4 id="listitem-details-name"><%= i.description %></h4>
+                        <% let defaultdate=i.date; %>
+                        <% let newdate = new Date(defaultdate); %>
+                        <% let formattedDate = newdate.toLocaleDateString('en-GB'); %>
+                        <h5 id="listitem-details-date"><%= formattedDate %></h5>
+                        <h5 id="listitem-details-category"><%= i.category %></h5>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+
+        <script type="text/javascript" src="/js/home.js"></script>
+    </body>
+</html>

@@ -1,0 +1,189 @@
+body {
+  height: 100%;
+  margin: auto;
+  padding: 0;
+  width: 50vw;
+  background-color: rgb(199, 236, 224);
+  justify-content: center;
+  align-items: center;
+  font-family: Geneva,Tahoma,Verdana,sans-serif; 
+  font-size: 2rem;
+}
+
+#todolist{
+    display: flex;
+    justify-content:left;
+    padding-top: 50px;
+}
+
+#description-div{
+    margin: 0;
+}
+
+#description-div input{
+    margin-top: 10px;
+    padding-top: 15px;
+    padding-left: 15px;
+    height: 50px;
+    width: 500px;
+    border: 3px solid;
+    border-radius: 5px;
+    background-color: rgb(252, 252, 252);
+    font-family: cursive;
+}
+
+@media (max-width: 1400px){
+    #description-div input{
+        width: 250px;
+    }
+}
+
+.heading{
+    margin: 0;
+}
+
+/* label{
+    font-size: 1rem;
+    margin: 0;
+} */
+
+#category-date-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    /* justify-content:space-between; */
+    padding-top: 30px;
+}
+
+#category-date-div-category{
+    width: 20%;
+}
+
+#category-date-div-category select{
+    margin-top: 10px;
+    height: 30px;
+    width: 100px;
+    border: 3px solid;
+    border-radius: 5px;
+    background-color: rgb(252, 252, 252);
+    font-family: cursive;
+}
+
+#category-date-div-date{
+    width: 20%;
+}
+
+#category-date-div-date input{
+    margin-top: 10px;
+    height: 30px;
+    width: 100px;
+    border: 3px solid;
+    border-radius: 5px;
+    background-color: rgb(252, 252, 252);
+    font-family: cursive;
+}
+
+@media (max-width: 1400px){
+    #category-date-div{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    #category-date-div-category{
+        width: 100%;
+    }
+
+    #category-date-div-date{
+        padding-top: 20px;
+        width: 100%;
+    }
+}
+
+#buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    /* justify-content:space-between; */
+    padding-top: 30px;
+    width: 50%;
+}
+
+button{
+    margin-top: 10px;
+    height: 30px;
+    width: 100px;
+    border: 3px solid;
+    border-radius: 5px;
+    background-color: rgb(252, 252, 252);
+    font-family: cursive;
+}
+
+#button1{
+    background-color: aquamarine;
+}
+
+#button2{
+    margin-top: 10px;
+    height: 21px;
+    width: 100px;
+    border: 3px solid;
+    border-radius: 5px;
+    background-color: rgb(252, 252, 252);
+    border-color: black;
+    color: black;
+    font-family: cursive;
+    font-size: 13px;
+    background-color: rgb(255, 127, 127);
+    margin-left: 20px;
+    padding-top: 3px;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+}
+
+@media (max-width: 900px){
+    #button2{
+        width: 120px;
+    }
+}
+
+#listitems{
+    padding-top: 20px;
+}
+
+#checkbox{
+    margin: 0;
+    margin-top: 30px;
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+}
+
+#listitem{
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+}
+
+#listitem-details{
+    padding-left: 20px;
+}
+
+#listitem-details-name{
+    font-size: 25px;
+    margin: 0;
+}
+
+#listitem-details-date{
+    font-size: 19px;
+    font-family: cursive;
+    font-weight: 400;
+    margin: 0;
+}
+
+#listitem-details-category{
+    font-size: 18px;
+    font-family: cursive;
+    font-weight: 400;
+    margin: 0;
+}
